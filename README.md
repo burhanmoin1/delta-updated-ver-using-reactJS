@@ -1,4 +1,4 @@
-# Delta updates site using reactJS
+# Delta updated website using react
 Website is currently being developed using reactJS.
 
 ## Learn More
