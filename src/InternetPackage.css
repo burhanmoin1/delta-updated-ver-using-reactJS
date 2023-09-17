@@ -5,14 +5,6 @@
     width: 50%;
     background: linear-gradient(90deg, rgba(255,255,255,1) 19%, rgba(254,254,254,1) 26%, rgba(238,238,238,1) 96%);
   }
-  
-.main-container {
-    display: flex;
-    justify-content: space-between;
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    background: linear-gradient(90deg, rgba(255,255,255,1) 19%, rgba(254,254,254,1) 26%, rgba(238,238,238,1) 96%);
-  }
 
   h2 {
     font-size: 24px;
@@ -37,4 +29,55 @@
 
 .signup-button:hover {
   background-color: #0056b3; /* Button background color on hover */
+}
+
+/* InternetPackage.css */
+
+/* ... Previous styles ... */
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 19%,
+    rgba(254, 254, 254, 1) 26%,
+    rgba(238, 238, 238, 1) 96%
+  );
+  overflow-x: hidden; /* Hide horizontal overflow */
+  position: relative; /* Position for absolute arrow buttons */
+}
+
+.packages-container {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping of packages */
+  gap: 10px; /* Adjust gap between packages as needed */
+  overflow-x: scroll; /* Enable horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+  padding: 10px 0;
+  margin: 0 20px; /* Add margin to give space for arrow buttons */
+}
+
+.scroll-button {
+  background-color: transparent;
+  color: #000000;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1; /* Ensure buttons are above the packages */
+}
+
+.scroll-button.left {
+  left: 0;
+}
+
+.scroll-button.right {
+  right: 0;
 }
