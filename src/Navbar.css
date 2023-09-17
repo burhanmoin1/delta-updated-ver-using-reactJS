@@ -1,0 +1,11 @@
+.dcn-logo {
+  max-width: 80px;
+ /* Set the maximum width for the logo */
+}
+
+.bg-body-tertiary {
+  --bs-bg-opacity: 1;
+  background-color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+}
+
