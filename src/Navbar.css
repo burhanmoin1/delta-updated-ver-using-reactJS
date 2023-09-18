@@ -5,11 +5,22 @@
 
 .bg-body-tertiary {
   --bs-bg-opacity: 1;
-  background-color: #FFFFFF;
+  background-color: rgba(255, 255, 255,1);
   font-family: 'Montserrat', sans-serif;
 }
 .fa-solid, .fas {
   font-weight: 900;
   padding: 15px;
   font-size: medium;
+}
+
+/* Custom class for Products dropdown menu */
+.products-dropdown .dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+.register-button {
+  margin-left: 50px;
+  
 }

@@ -7,10 +7,10 @@ const MainComponent = () => {
 
   // Sample data for internet packages
   const packages = [
-    { name: 'Basic', speed: '15 Mbps', price: 1200 },
-    { name: 'Standard', speed: '25 Mbps', price: 2200 },
-    { name: 'Premium', speed: '50 Mbps', price: 5000 },
-    { name: 'Void', speed: '100 Mbps', price: 10000 },
+    { name: 'Basic', speed: '15 Mbps', price: '1,200' },
+    { name: 'Standard', speed: '25 Mbps', price: '2,200' },
+    { name: 'Premium', speed: '50 Mbps', price: '5,000' },
+    { name: 'Void', speed: '100 Mbps', price: '10,000' },
   ];
 
   const scrollLeft = () => {
