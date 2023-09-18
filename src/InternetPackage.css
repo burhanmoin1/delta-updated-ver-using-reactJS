@@ -54,7 +54,7 @@
   display: flex;
   flex-wrap: nowrap; /* Prevent wrapping of packages */
   gap: 10px; /* Adjust gap between packages as needed */
-  overflow-x: scroll; /* Enable horizontal scrolling */
+ /* Enable horizontal scrolling */
   -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
   padding: 10px 0;
   margin: 0 20px; /* Add margin to give space for arrow buttons */

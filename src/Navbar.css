@@ -8,4 +8,8 @@
   background-color: #FFFFFF;
   font-family: 'Montserrat', sans-serif;
 }
-
+.fa-solid, .fas {
+  font-weight: 900;
+  padding: 15px;
+  font-size: medium;
+}

@@ -6,6 +6,7 @@ import DeltaNavbar from './Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MainComponent from './MainComponent';
 import Cablegif from './Cablegif';
+import RocketContainer from './RocketContainer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,6 +14,7 @@ root.render(
     <DeltaNavbar />
     <Cablegif />
     <MainComponent />
+    <RocketContainer />
   </React.StrictMode>
 );
 
