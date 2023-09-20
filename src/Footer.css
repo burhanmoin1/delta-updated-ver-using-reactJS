@@ -2,13 +2,13 @@
 .footer {
   background-color: black; /* Background color for the entire footer */
   color: white; /* Text color for the entire footer */
-  padding: 20px; /* Add padding to create some space inside the footer */
-  font-family: 'Monsteratt', sans-serif; /* Add the Monsteratt font */
+  padding: 20px; 
+  font-family: 'Montserrat', sans-serif;/* Add padding to create some space inside the footer */
 }
 
 .footer-links {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 20px; /* Adjust the spacing between links */
 }
 
@@ -19,8 +19,19 @@
 }
 
 .company-description {
-  text-align: center; /* Center-align the company description */
-  margin-top: 20px; /* Add some top margin */
+  text-align: start; /* Center-align the company description */
+  margin-top: 1px;
+}
+
+.company-description h2 {
+  padding: 1px;
+  margin-top: -20px;
+  font-weight: 501;
+}
+
+.company-description p {
+  margin-right: 5px;
+
 }
 
 .company-info {
@@ -35,5 +46,6 @@
 
 .register-button {
   margin-left: 15px;
-  margin-top: 1px;
+  margin-bottom: 20px;
+  text-align: center;
 }

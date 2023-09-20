@@ -24,10 +24,10 @@
   
   input,
   textarea {
-    width: 285%;
+    width: 180%;
     padding: 12px;
     margin: 8px 0;
-    margin-left: -107px;
+    margin-left: -55px;
   }
   
   button {
@@ -37,6 +37,7 @@
     color: white;
     border: none;
     border-radius: 4px;
+    margin-left: 45px;
     cursor: pointer;
   }
   

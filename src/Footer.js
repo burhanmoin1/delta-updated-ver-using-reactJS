@@ -4,29 +4,37 @@ import './Footer.css';
 import Button from 'react-bootstrap/Button';
 
 const Footer = () => {
-    return (
-      <footer className="footer">
-        <div className="footer-links">
-          <Link to="/">Home</Link>
-          <Link to="/support">Support</Link>
-          <Link to="/about">About Us</Link>
-        </div>
-        <div className="company-description">
-          <p>
-            Delta Communications is a leading provider of high-speed internet and cable services. 
-            We are committed to delivering the best in connectivity and entertainment to our customers.
-          </p>
-          <Link to="/signup">
-              <Button variant="dark" className="register-button">
-                Register with Delta
-              </Button>
-            </Link>
-        </div>
-        <div className="company-info">
-          <p>Address: Plot no.23-F, 3rd floor Muhammad Ali Society, Karachi<br></br>&copy; 2023 Delta Communications. All rights reserved.</p>
-        </div>        
-      </footer>
-    );
-  };
+  return (
+    <footer className="footer">
+      <div className="footer-links">
+      <Link to="/">
+          <i className="fas fa-home"></i> {/* Replace "Home" with the home icon */}
+        </Link>
+        <Link to="/support">
+          <i className="fas fa-envelope"></i> {/* Replace "Support" with the envelope icon */}
+        </Link>
+        <Link to="/about">
+            <i className="fas fa-globe"></i>
+        </Link>
+      </div>
+      <div className="company-description">
+      <h2 className='about-us'>About Delta Communication Network:</h2>
+        <p>
+          Delta Communication is a provider of high-speed internet and cable services. 
+          We are committed to delivering the best in connectivity, entertainment and customer support to our users.
+        </p>
+      </div>
+      <div className="company-info">
+      <Link to="/signup">
+          <Button variant="dark" className="register-button">
+            Register with Delta
+          </Button>
+        </Link>
+        <p>Address: Plot no.23-F, 3rd floor Muhammad Ali Society, Karachi<br></br>&copy; 2023 Delta Communication Network. All rights reserved.</p>
+        <p>Made by Burhan ❤️</p>
+      </div>        
+    </footer>
+  );
+};
   
   export default Footer;

@@ -3,6 +3,7 @@ import './SignUpForm.css';
 import axios from 'axios';
 import Cookies from 'react-cookies';
 import { useNavigate } from 'react-router-dom'; 
+import authToken from './AuthToken';
 
 const SignUpForm = () => {
   const [formData, setFormData] = useState({
@@ -47,7 +48,8 @@ const SignUpForm = () => {
       // Make a POST request to your Django API endpoint using Axios
       const response = await axios.post('api/create-customer/', dataToSend, {
         headers: {
-          'X-CSRFToken': csrfToken, // Include the CSRF token in the request headers
+          'X-CSRFToken': csrfToken, 
+          'Authorization': authToken,
         },
       });
       
@@ -64,7 +66,7 @@ const SignUpForm = () => {
   return (
     <div className="form-container">
       <div className="form-header">
-        <h2 className="form-heading">Are you ready to test our rocket speeds?</h2>
+        <h2 className="form-heading">Are you ready to test out our rocket speeds?</h2>
         <p className="form-paragraph">
           Join Delta today to experience internet and cable at rocket speeds
         </p>
@@ -108,6 +110,36 @@ const SignUpForm = () => {
             onChange={handleChange}
             onBlur={handleBlur}
           />
+        </div>
+        <div className="form-divider">
+          <select
+            name="InternetInterested"
+            id="InternetInterested"
+            value={formData.InternetInterested}
+            onChange={handleChange}
+          >
+            <option value="">Choose internet</option>
+            <optgroup label="Internet">
+              <option value="Basic">Basic</option>
+              <option value="Standard">Standard</option>
+              <option value="Premium">Premium</option>
+              <option value="Void">Void</option>
+            </optgroup>
+          </select>
+        </div>
+        <div className="form-divider">
+          <select
+            name="CableInterested"
+            id="CableInterested"
+            value={formData.CableInterested}
+            onChange={handleChange}
+          >
+            <option value="">Choose Cable: </option>
+            <optgroup label="Cable">
+              <option value="Standard">Standard</option>
+              <option value="No Cable">No Cable</option>
+            </optgroup>
+          </select>
         </div>
         <button className="submit-signup" type="submit">
           Submit
