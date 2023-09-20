@@ -1,0 +1,39 @@
+/* Footer.css */
+.footer {
+  background-color: black; /* Background color for the entire footer */
+  color: white; /* Text color for the entire footer */
+  padding: 20px; /* Add padding to create some space inside the footer */
+  font-family: 'Monsteratt', sans-serif; /* Add the Monsteratt font */
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adjust the spacing between links */
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: white; /* Text color for the links */
+  font-weight: bold;
+}
+
+.company-description {
+  text-align: center; /* Center-align the company description */
+  margin-top: 20px; /* Add some top margin */
+}
+
+.company-info {
+  text-align: center; /* Center-align the company info */
+  margin-top: 20px; /* Add some top margin */
+}
+
+.company-info p {
+  font-size: 12px; /* Adjust the font size of the company info */
+}
+
+
+.register-button {
+  margin-left: 15px;
+  margin-top: 1px;
+}

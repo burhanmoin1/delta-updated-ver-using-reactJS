@@ -9,7 +9,7 @@
     background-position: center;
     overflow: hidden;
     opacity: 0; /* Initially set opacity to 0 to hide the rocket */
-    transform: translateY(60px); /* Start the rocket off-screen */
+    transform: translateY(65px); /* Start the rocket off-screen */
     transition: opacity 1s ease, transform 1s ease;
   }
   

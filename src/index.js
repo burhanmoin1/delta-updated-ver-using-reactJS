@@ -1,24 +1,22 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import Routes instead of Switch
 import './index.css';
-import reportWebVitals from './reportWebVitals';
-import DeltaNavbar from './Navbar';
+import HomePage from './HomePage'; // Import your homepage component here
 import 'bootstrap/dist/css/bootstrap.min.css';
-import MainComponent from './MainComponent';
-import Cablegif from './Cablegif';
-import RocketContainer from './RocketContainer';
+import SignUpPage from './SignUpPage';
+import ThankYouPage from './ThankYouPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <DeltaNavbar />
-    <Cablegif />
-    <MainComponent />
-    <RocketContainer />
-  </React.StrictMode>
+    <Router>
+      <Routes> {/* Use Routes instead of Switch */}
+        <Route path="/" element={<HomePage />} /> {/* Define a route for your homepage */}
+        <Route path="/signup" element={<SignUpPage />} />
+        <Route path="/thankyou" element={<ThankYouPage />} />
+      </Routes>
+    </Router>
+  </React.StrictMode>,
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

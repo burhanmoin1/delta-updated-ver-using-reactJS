@@ -2,11 +2,11 @@
     border: 1px solid #ccc;
     padding: 90px;
     margin: 0px;
-    width: 100%;
-    background: linear-gradient(90deg, rgba(255,255,255,1) 19%, rgba(254,254,254,1) 26%, rgba(238,238,238,1) 96%);
+    width: calc(50% - 20px);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 14%, rgba(254,254,254,1) 54%, rgba(250,249,246,1) 88%);
   }
 
-  h2 {
+.packageh2 {
     font-size: 24px;
     margin-bottom: 10px;
     font-weight: 510;
@@ -35,10 +35,6 @@
   background-color: #0056b3; /* Button background color on hover */
 }
 
-/* InternetPackage.css */
-
-/* ... Previous styles ... */
-
 .main-container {
   display: flex;
   justify-content: space-between;
@@ -61,7 +57,8 @@
   overflow-x: hidden; /* Enable horizontal scrolling */
   -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
   padding: 10px 0;
-  margin: 0 20px; /* Add margin to give space for arrow buttons */
+  margin: 0 20px; 
+  width: 100%;/* Add margin to give space for arrow buttons */
 }
 
 .scroll-button {

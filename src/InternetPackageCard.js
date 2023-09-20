@@ -1,18 +1,62 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import './InternetPackage.css';
+import { Link } from 'react-router-dom';
+
 
 const InternetPackageCard = ({ packageData }) => {
   return (
     <div className="package-card">
-      <h2>{packageData.name}</h2>
-      <br></br>
-      <p>Speed: {packageData.speed}</p><br></br>
-      <p className='price'>Rs. {packageData.price}/month</p><br></br>
-      {/* Signup button linking to the signup URL */}
-      <a href={'deltacommunication.xyz'} target="_blank" rel="noopener noreferrer" className="signup-button">
-        Sign Up
-      </a>
-    </div>
+        <h2 className='packageh2'>{packageData.name}</h2>
+        <br></br>
+        <p>Speed: {packageData.speed}</p><br></br>
+        <p className='price'>Rs. {packageData.price}/month</p><br></br>
+        {/* Signup button linking to the signup URL */}
+        <Link to={'/signup'} className="signup-button">
+          Sign Up
+        </Link>
+      </div>
   );
 };
 
-export default InternetPackageCard;
+const DeltaInternetCard = () => {
+  const containerRef = useRef(null);
+
+  // Sample data for internet packages
+  const packages = [
+    { name: 'Basic', speed: '15 Mbps', price: '1,200' },
+    { name: 'Standard', speed: '25 Mbps', price: '2,200' },
+    { name: 'Premium', speed: '50 Mbps', price: '5,000' },
+    { name: 'Void', speed: '100 Mbps', price: '10,000' },
+  ];
+
+  const scrollLeft = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollLeft -= 300; // Adjust the scroll distance as needed
+    }
+  };
+
+  const scrollRight = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollLeft += 300; // Adjust the scroll distance as needed
+    }
+  };
+
+  return (
+      <div className="main-container">
+        <button onClick={scrollLeft} className="scroll-button left">
+          &lt; {/* Left arrow */}
+        </button>
+        <div className="packages-container" ref={containerRef}>
+          {packages.map((packageData, index) => (
+            <InternetPackageCard key={index} packageData={packageData} />
+          ))}
+        </div>
+        <button onClick={scrollRight} className="scroll-button right">
+          &gt; {/* Right arrow */}
+        </button>
+      </div>
+  );
+};
+
+export default DeltaInternetCard;
+

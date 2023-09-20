@@ -1,0 +1,25 @@
+/* ThankYou.css */
+
+.thank-you-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    min-height: 100vh;
+    background-color:rgb(250, 249, 246);
+    border-top: 6px solid black; /* Add a black border */
+    padding: 20px; 
+    font-family: 'Monsteratt', sans-serif; 
+  }
+  
+  .thank-you-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .thank-you-paragraph {
+    font-size: 16px;
+    text-align: center;
+  }
+  

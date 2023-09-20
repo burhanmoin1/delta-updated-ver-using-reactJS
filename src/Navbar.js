@@ -6,6 +6,7 @@ import logo from './logo.jpg';
 import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image';
 import './Navbar.css';
+import { Link } from 'react-router-dom';
 
 
 function DeltaNavbar() {
@@ -21,19 +22,23 @@ function DeltaNavbar() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container className='Nav-bg'>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           {/* Use the Image component to display your logo */}
           <Image src={logo} className='dcn-logo'/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
+          <Nav.Link>
+              <Link to="/" className="home-link">Home</Link> {/* Add a specific class to the "Home" link */}
+            </Nav.Link>
             <Nav.Link href="#Support">Support</Nav.Link>
             <Nav.Link href="#home">About us</Nav.Link>
-            <Button variant="dark" className="register-button">
-            Register with Delta
-          </Button>
+            <Link to="/signup">
+              <Button variant="dark" className="register-button">
+                Register with Delta
+              </Button>
+            </Link>
           </Nav>
           {/* Icons for phone and email */}
           <div className="icon-container">
