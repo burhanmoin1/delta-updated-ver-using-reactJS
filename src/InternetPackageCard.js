@@ -11,7 +11,7 @@ const InternetPackageCard = ({ packageData }) => {
         <p>Speed: {packageData.speed}</p><br></br>
         <p className='price'>Rs. {packageData.price}/month</p><br></br>
         {/* Signup button linking to the signup URL */}
-        <Link to={'/signup'} className="signup-button">
+        <Link to={'/signup'} className="homesignup-button">
           Sign Up
         </Link>
       </div>

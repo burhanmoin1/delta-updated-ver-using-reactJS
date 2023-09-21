@@ -13,7 +13,7 @@ const Footer = () => {
         <Link to="/support">
           <i className="fas fa-envelope"></i> {/* Replace "Support" with the envelope icon */}
         </Link>
-        <Link to="/about">
+        <Link to="/aboutus">
             <i className="fas fa-globe"></i>
         </Link>
       </div>
@@ -21,7 +21,7 @@ const Footer = () => {
       <h2 className='about-us'>About Delta Communication Network:</h2>
         <p>
           Delta Communication is a provider of high-speed internet and cable services. 
-          We are committed to delivering the best in connectivity, entertainment and customer support to our users.
+          We are committed to delivering the best in connectivity, entertainment and customer support for our users.
         </p>
       </div>
       <div className="company-info">

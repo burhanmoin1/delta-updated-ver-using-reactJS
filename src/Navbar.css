@@ -13,23 +13,21 @@
 
 .fa-solid, .fas {
   font-weight: 900;
-  padding: 15px;
+  padding: 20px;
   font-size: medium;
 }
-
-/* Custom class for Products dropdown menu 
-.products-dropdown .dropdown-menu {
-  left: auto;
-  right: 0;
-} */
 
 
 .register-button {
   margin-left: 15px;
-  margin-top: 1px;
+  margin-top: 7px;
 }
 
 .home-link {
   text-decoration: none; /* Remove the underline */
   color: var(--bs-nav-link-color);
+}
+
+.nav-link{
+  padding: 20px;
 }

@@ -30,10 +30,14 @@ function DeltaNavbar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
           <Nav.Link>
-              <Link to="/" className="home-link">Home</Link> {/* Add a specific class to the "Home" link */}
+          <Link to="/" className="nav-link">Home</Link> {/* Add a specific class to the "Home" link */}
             </Nav.Link>
-            <Nav.Link href="#Support">Support</Nav.Link>
-            <Nav.Link href="#home">About us</Nav.Link>
+            <Nav.Link>
+              <Link to="/support" className="nav-link">Support</Link> {/* Add a specific class to the "Home" link */}
+            </Nav.Link>
+            <Nav.Link>
+              <Link to="/aboutus" className="nav-link">About Us</Link> {/* Add a specific class to the "Home" link */}
+            </Nav.Link>
             <Link to="/signup">
               <Button variant="dark" className="register-button">
                 Register with Delta

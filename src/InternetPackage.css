@@ -18,7 +18,7 @@
 
 /* Add this CSS in your stylesheet or component CSS */
 
-.signup-button {
+.homesignup-button {
   display: inline-block;
   padding: 10px 20px; /* Adjust padding to control button size */
   background-color: #007bff; /* Button background color */
@@ -31,7 +31,7 @@
   transition: background-color 0.3s ease; /* Smooth hover effect */
 }
 
-.signup-button:hover {
+.homesignup-button:hover {
   background-color: #0056b3; /* Button background color on hover */
 }
 

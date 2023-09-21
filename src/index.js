@@ -6,6 +6,8 @@ import HomePage from './HomePage'; // Import your homepage component here
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SignUpPage from './SignUpPage';
 import ThankYouPage from './ThankYouPage';
+import AboutUsPage from './AboutUs';
+import SupportFormPage from './SupportForm';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,6 +17,8 @@ root.render(
         <Route path="/" element={<HomePage />} /> {/* Define a route for your homepage */}
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/thankyou" element={<ThankYouPage />} />
+        <Route path='/aboutus' element={<AboutUsPage />} />
+        <Route path='/support' element={<SupportFormPage />} />
       </Routes>
     </Router>
   </React.StrictMode>,

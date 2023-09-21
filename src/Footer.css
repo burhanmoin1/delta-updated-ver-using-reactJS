@@ -2,14 +2,14 @@
 .footer {
   background-color: black; /* Background color for the entire footer */
   color: white; /* Text color for the entire footer */
-  padding: 20px; 
-  font-family: 'Montserrat', sans-serif;/* Add padding to create some space inside the footer */
+  padding: 5px; 
+  font-family: 'Montserrat', sans-serif;
 }
 
 .footer-links {
   display: flex;
   justify-content: flex-end;
-  gap: 20px; /* Adjust the spacing between links */
+  gap: 10px; /* Adjust the spacing between links */
 }
 
 .footer-links a {

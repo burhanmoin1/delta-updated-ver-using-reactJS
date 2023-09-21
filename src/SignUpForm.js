@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './SignUpForm.css'; 
+import './SignUpForm.css';
 import axios from 'axios';
 import Cookies from 'react-cookies';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
 import authToken from './AuthToken';
 
 const SignUpForm = () => {
@@ -11,6 +11,8 @@ const SignUpForm = () => {
     email: '',
     phone_number: '',
     address: '',
+    internet_package: 'basic',
+    cable_package: 'cable',
   });
 
   const navigate = useNavigate();
@@ -36,32 +38,34 @@ const SignUpForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const csrfToken = Cookies.load('csrftoken'); // Replace 'csrftoken' with your actual cookie name
-  
+
     const dataToSend = {
       name: formData.name,
       email: formData.email,
       phone_number: formData.phone_number,
       address: formData.address,
+      internet_package: formData.internet_package,
+      cable_package: formData.cable_package,
     };
-  
+
     try {
       // Make a POST request to your Django API endpoint using Axios
       const response = await axios.post('api/create-customer/', dataToSend, {
         headers: {
-          'X-CSRFToken': csrfToken, 
+          'X-CSRFToken': csrfToken,
           'Authorization': authToken,
         },
       });
-      
-        // Upon successful submission, navigate to the "thank you" page
-        if (response.status === 201) {
-          navigate('/thankyou');
-        }
-      } catch (error) {
-        console.error('Form submission failed.');
-        console.error(error);
+
+      // Upon successful submission, navigate to the "thank you" page
+      if (response.status === 201) {
+        navigate('/thankyou');
       }
-    };
+    } catch (error) {
+      console.error('Form submission failed.');
+      console.error(error);
+    }
+  };
 
   return (
     <div className="form-container">
@@ -80,6 +84,7 @@ const SignUpForm = () => {
             value={formData.name}
             onChange={handleChange}
             onBlur={handleBlur}
+            required
           />
         </div>
         <div className="form-divider">
@@ -90,6 +95,7 @@ const SignUpForm = () => {
             value={formData.email}
             onChange={handleChange}
             onBlur={handleBlur}
+            required
           />
         </div>
         <div className="form-divider">
@@ -100,6 +106,7 @@ const SignUpForm = () => {
             value={formData.phone_number}
             onChange={handleChange}
             onBlur={handleBlur}
+            required
           />
         </div>
         <div className="form-divider">
@@ -109,39 +116,40 @@ const SignUpForm = () => {
             value={formData.address}
             onChange={handleChange}
             onBlur={handleBlur}
+            required
           />
         </div>
         <div className="form-divider">
+          <label htmlFor="internet_package">Select an Internet Package</label>
           <select
-            name="InternetInterested"
-            id="InternetInterested"
-            value={formData.InternetInterested}
+            className="form-control"
+            id="internet_package"
+            name="internet_package"
+            required
+            value={formData.internet_package}
             onChange={handleChange}
           >
-            <option value="">Choose internet</option>
-            <optgroup label="Internet">
-              <option value="Basic">Basic</option>
-              <option value="Standard">Standard</option>
-              <option value="Premium">Premium</option>
-              <option value="Void">Void</option>
-            </optgroup>
+            <option value="basic">Basic</option>
+            <option value="standard">Standard</option>
+            <option value="premium">Premium</option>
+            <option value="void">Void</option>
           </select>
         </div>
         <div className="form-divider">
+          <label htmlFor="cable_package">Select a Cable Package</label>
           <select
-            name="CableInterested"
-            id="CableInterested"
-            value={formData.CableInterested}
+            className="form-control"
+            id="cable_package"
+            name="cable_package"
+            required
+            value={formData.cable_package}
             onChange={handleChange}
           >
-            <option value="">Choose Cable: </option>
-            <optgroup label="Cable">
-              <option value="Standard">Standard</option>
-              <option value="No Cable">No Cable</option>
-            </optgroup>
+            <option value="cable">Yes</option>
+            <option value="no-cable">No</option>
           </select>
         </div>
-        <button className="submit-signup" type="submit">
+        <button className="signup-button" type="submit">
           Submit
         </button>
       </form>
