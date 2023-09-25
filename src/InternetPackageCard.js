@@ -23,10 +23,11 @@ const DeltaInternetCard = () => {
 
   // Sample data for internet packages
   const packages = [
-    { name: 'Basic', speed: '15 Mbps', price: '1,200' },
-    { name: 'Standard', speed: '25 Mbps', price: '2,200' },
-    { name: 'Premium', speed: '50 Mbps', price: '5,000' },
-    { name: 'Void', speed: '100 Mbps', price: '10,000' },
+    { name: 'Basic', speed: '12 Mbps', price: '1,500' },
+    { name: 'Standard', speed: '22 Mbps', price: '2,500' },
+    { name: 'Premium', speed: '34 Mbps', price: '4,000' },
+    { name: 'Flash', speed: '52 Mbps', price: '5,600' },
+    { name: 'Rocket', speed: '102 Mbps', price: '9,500' },
   ];
 
   const scrollLeft = () => {

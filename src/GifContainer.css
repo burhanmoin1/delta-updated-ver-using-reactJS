@@ -9,8 +9,15 @@
     text-align: center;
     color: #fff; /* Text color */
     font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-weight: 500;
   }
   
+  .gif-container h2 {
+    font-weight: bold;
+    font-style: italic;
+  }
+
   .content {
     position: absolute;
     top: 50%;

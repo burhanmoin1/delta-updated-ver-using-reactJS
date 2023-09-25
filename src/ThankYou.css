@@ -9,7 +9,9 @@
     background-color:rgb(250, 249, 246);
     border-top: 6px solid black; /* Add a black border */
     padding: 20px; 
-    font-family: 'Monsteratt', sans-serif; 
+    font-family: "Montserrat", sans-serif;
+    font-style: italic;
+    font-weight: 500;
   }
   
   .thank-you-heading {

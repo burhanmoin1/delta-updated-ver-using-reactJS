@@ -4,12 +4,15 @@
   color: white; /* Text color for the entire footer */
   padding: 5px; 
   font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: 500;
 }
 
 .footer-links {
   display: flex;
   justify-content: flex-end;
-  gap: 10px; /* Adjust the spacing between links */
+  gap: 150px; /* Adjust the spacing between links */
+  padding-bottom: 20px;
 }
 
 .footer-links a {
@@ -27,6 +30,7 @@
   padding: 1px;
   margin-top: -20px;
   font-weight: 501;
+  font-style: initial;
 }
 
 .company-description p {

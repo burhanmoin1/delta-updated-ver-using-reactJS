@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import './SignUpForm.css';
 import axios from 'axios';
-import Cookies from 'react-cookies';
 import { useNavigate } from 'react-router-dom';
-import authToken from './AuthToken';
 
 const SignUpForm = () => {
   const [formData, setFormData] = useState({
@@ -37,7 +35,6 @@ const SignUpForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const csrfToken = Cookies.load('csrftoken'); // Replace 'csrftoken' with your actual cookie name
 
     const dataToSend = {
       name: formData.name,
@@ -50,12 +47,7 @@ const SignUpForm = () => {
 
     try {
       // Make a POST request to your Django API endpoint using Axios
-      const response = await axios.post('api/create-customer/', dataToSend, {
-        headers: {
-          'X-CSRFToken': csrfToken,
-          'Authorization': authToken,
-        },
-      });
+      const response = await axios.post('api/create-customer/', dataToSend);
 
       // Upon successful submission, navigate to the "thank you" page
       if (response.status === 201) {
@@ -129,10 +121,11 @@ const SignUpForm = () => {
             value={formData.internet_package}
             onChange={handleChange}
           >
-            <option value="basic">Basic</option>
-            <option value="standard">Standard</option>
-            <option value="premium">Premium</option>
-            <option value="void">Void</option>
+            <option value="basic">Basic  -  12mbps</option>
+            <option value="standard">Standard - 22mbps</option>
+            <option value="premium">Premium - 34mbps</option>
+            <option value="flash">Flash - 52mbps</option>
+            <option value="rocket">Rocket - 102mbps</option>
           </select>
         </div>
         <div className="form-divider">
@@ -145,7 +138,7 @@ const SignUpForm = () => {
             value={formData.cable_package}
             onChange={handleChange}
           >
-            <option value="cable">Yes</option>
+            <option value="cable">Yes - +500rs</option>
             <option value="no-cable">No</option>
           </select>
         </div>

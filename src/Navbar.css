@@ -3,24 +3,28 @@
  /* Set the maximum width for the logo */
 }
 
-.bg-body-tertiary {
-  --bs-bg-opacity: 1;
-  background-color: rgba(255, 255, 255,1);
+.bg-white {
   font-family: 'Montserrat', sans-serif;
   margin-bottom: -15px;
   margin-top: -15px;
+  font-style: italic;
+  padding-top: constant(safe-area-inset-top); /* iOS 11.0 */
+  padding-top: env(safe-area-inset-top); /* iOS 11.2+ */
 }
 
 .fa-solid, .fas {
   font-weight: 900;
   padding: 20px;
   font-size: medium;
+  cursor: pointer;
 }
 
 
 .register-button {
   margin-left: 15px;
   margin-top: 7px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
 }
 
 .home-link {
@@ -30,4 +34,8 @@
 
 .nav-link{
   padding: 20px;
+}
+
+.bg-white {
+  margin: 16px 0;
 }

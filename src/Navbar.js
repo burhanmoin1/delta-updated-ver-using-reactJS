@@ -20,7 +20,7 @@ function DeltaNavbar() {
     window.location.href = 'mailto:burhandeltacn@gmail.com'; // Replace with your email address
   };
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-white">
       <Container className='Nav-bg'>
         <Navbar.Brand href="/">
           {/* Use the Image component to display your logo */}

@@ -1,44 +1,40 @@
+
 .package-card {
-    border: 1px solid #ccc;
-    padding: 90px;
-    margin: 0px;
-    width: calc(50% - 20px);
-    background: linear-gradient(90deg, rgba(255,255,255,1) 14%, rgba(254,254,254,1) 54%, rgba(250,249,246,1) 88%);
-  }
+  border: 0.1px solid #ccc;
+  padding: 90px;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(255,255,255,1) 14%, rgba(254,254,254,1) 54%, rgba(250,249,246,1) 88%);
+}
 
 .packageh2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    font-weight: 510;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .price {
-  font-weight: 600;
+  font-weight: bold;
+  font-style: italic;
 }
-
-/* Add this CSS in your stylesheet or component CSS */
 
 .homesignup-button {
   display: inline-block;
-  padding: 10px 20px; /* Adjust padding to control button size */
-  background-color: #007bff; /* Button background color */
-  color: #fff; /* Button text color */
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
   text-decoration: none;
   border: none;
-  border-radius: 4px; /* Rounded corners */
+  border-radius: 4px;
   cursor: pointer;
-  font-size: 16px; /* Button text size */
-  transition: background-color 0.3s ease; /* Smooth hover effect */
+  font-size: 13px;
+  transition: background-color 0.3s ease;
 }
 
 .homesignup-button:hover {
-  background-color: #0056b3; /* Button background color on hover */
+  background-color: #0056b3;
 }
 
 .main-container {
-  display: flex;
-  justify-content: space-between;
-  font-family: 'Montserrat', sans-serif;
   text-align: center;
   background: linear-gradient(
     90deg,
@@ -46,19 +42,32 @@
     rgba(254, 254, 254, 1) 26%,
     rgba(238, 238, 238, 1) 96%
   );
-  overflow-x: hidden; /* Hide horizontal overflow */
-  position: relative; /* Position for absolute arrow buttons */
+  overflow-x: hidden;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  padding: 1px;
 }
 
 .packages-container {
   display: flex;
-  flex-wrap: nowrap; /* Prevent wrapping of packages */
-  gap: 10px; /* Adjust gap between packages as needed */
-  overflow-x: hidden; /* Enable horizontal scrolling */
-  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: scroll;
   padding: 10px 0;
-  margin: 0 20px; 
-  width: 100%;/* Add margin to give space for arrow buttons */
+  margin: 20 20px;
+  width: 100%;
+  background-color: transparent;
+}
+
+.packages-container::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: transparent;
+}
+
+.packages-container::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 1rem;
 }
 
 .scroll-button {
@@ -71,8 +80,8 @@
   cursor: pointer;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  z-index: 1; /* Ensure buttons are above the packages */
+  transform: translateY(-30%);
+  z-index: 1;
 }
 
 .scroll-button.left {

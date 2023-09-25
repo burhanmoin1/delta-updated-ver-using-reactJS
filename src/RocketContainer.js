@@ -4,13 +4,13 @@ import './RocketContainer.css';
 
 const pointsContent = [
   {
-    pointText: 'Fast fiber at your doorstep',
-    content: 'Experience lightning-fast internet like never before.',
+    pointText: 'Fiber at your doorstep',
+    content: 'Experience lightning-fast internet delivered to your doorstep for no charges.',
     iconClass: 'fas fa-wifi', // Wifi icon
   },
   {
     pointText: 'Rocket-powered internet',
-    content: 'Our advanced technology takes you to the speed of light.',
+    content: 'Our internet powered by cybernet takes you to places never before',
     iconClass: 'fas fa-rocket', // Rocket icon
   },
   {

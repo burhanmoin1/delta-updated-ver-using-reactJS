@@ -8,6 +8,7 @@ import SignUpPage from './SignUpPage';
 import ThankYouPage from './ThankYouPage';
 import AboutUsPage from './AboutUs';
 import SupportFormPage from './SupportForm';
+import ComplaintThanksPage from './ComplaintThanks';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,6 +20,7 @@ root.render(
         <Route path="/thankyou" element={<ThankYouPage />} />
         <Route path='/aboutus' element={<AboutUsPage />} />
         <Route path='/support' element={<SupportFormPage />} />
+        <Route path='/complaint-registered' element={<ComplaintThanksPage />} />
       </Routes>
     </Router>
   </React.StrictMode>,
